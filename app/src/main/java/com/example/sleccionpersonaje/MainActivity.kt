@@ -9,13 +9,14 @@ import com.example.sleccionpersonaje.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    lateinit var sel_personaje :  String
+
 
     @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         binding.button.setOnClickListener{
             binding.imageView.setImageResource(R.drawable.guerreropng)
             binding.imageView.setBackground(getDrawable(R.drawable.seleccion))
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             binding.button4.setBackground(getDrawable(R.drawable.seleccion))
 
 
-            sel_personaje="guerrero"
+            personaje.clase="guerrero"
         }
         binding.button2.setOnClickListener{
             binding.imageView.setImageResource(R.drawable.ladron)
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             binding.button3.setBackground(getDrawable(R.drawable.seleccion))
             binding.button4.setBackground(getDrawable(R.drawable.seleccion))
 
-            sel_personaje="ladron"
+            personaje.clase="ladron"
         }
         binding.button3.setOnClickListener{
             binding.imageView.setImageResource(R.drawable.mago)
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             binding.button3.setBackground(getDrawable(R.drawable.seleccion))
             binding.button4.setBackground(getDrawable(R.drawable.seleccion))
 
-            sel_personaje="mago"
+            personaje.clase="mago"
         }
         binding.button4.setOnClickListener{
             binding.imageView.setImageResource(R.drawable.berserker)
@@ -59,22 +60,22 @@ class MainActivity : AppCompatActivity() {
             binding.button3.setBackground(getDrawable(R.drawable.seleccion))
             binding.button4.setBackground(getDrawable(R.drawable.seleccion))
 
-            sel_personaje="berserker"
+            personaje.clase="berserker"
         }
         var intent_razas =Intent(this,Razas::class.java)
         binding.button5.setOnClickListener{
 
-            if (sel_personaje.equals("guerrero"))
+            if (personaje.clase.equals("guerrero"))
                 binding.button.setBackground(getDrawable(R.drawable.seleccionado))
-            if (sel_personaje.equals("ladron"))
+            if (personaje.clase.equals("ladron"))
                 binding.button2.setBackground(getDrawable(R.drawable.seleccionado))
-            if (sel_personaje.equals("mago"))
+            if (personaje.clase.equals("mago"))
                 binding.button3.setBackground(getDrawable(R.drawable.seleccionado))
-            if (sel_personaje.equals("berserker"))
+            if (personaje.clase.equals("berserker"))
                 binding.button4.setBackground(getDrawable(R.drawable.seleccionado))
             binding.imageView.setBackground(getDrawable(R.drawable.seleccionado))
             Handler().postDelayed({
-                intent_razas.putExtra("CLASE", sel_personaje)
+
                 startActivity(intent_razas)
             }, 1000)
 

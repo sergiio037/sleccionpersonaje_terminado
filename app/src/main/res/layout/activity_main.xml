@@ -4,13 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E1E1E"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25sp"
+        android:padding="10sp"
+
+        android:clipChildren="false"
+        android:background="@drawable/resumen"
+        android:orientation="vertical">
 
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:elevation="20sp"
         android:layout_gravity="center"
 
         android:layout_marginTop="50sp"
@@ -21,11 +32,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
+
         android:orientation="horizontal">
         <Button
             android:layout_column="1"
             android:layout_margin="10sp"
             android:background="@drawable/boton"
+            android:stateListAnimator="@null"
+            android:elevation="20sp"
             android:id="@+id/button"
             android:layout_weight="1"
             android:layout_width="match_parent"
@@ -37,6 +51,8 @@
             android:id="@+id/button2"
             android:layout_margin="10sp"
             android:background="@drawable/boton"
+            android:stateListAnimator="@null"
+            android:elevation="20sp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,6 +68,8 @@
         <Button
             android:layout_column="1"
             android:layout_margin="10sp"
+            android:stateListAnimator="@null"
+            android:elevation="20sp"
             android:id="@+id/button3"
             android:layout_weight="1"
             android:background="@drawable/boton"
@@ -63,6 +81,8 @@
             android:layout_margin="10sp"
             android:id="@+id/button4"
             android:layout_weight="1"
+            android:stateListAnimator="@null"
+            android:elevation="20sp"
             android:layout_width="match_parent"
             android:background="@drawable/boton"
             android:layout_height="wrap_content"
@@ -71,11 +91,14 @@
     <Button
         android:layout_margin="10sp"
         android:id="@+id/button5"
-
+        android:stateListAnimator="@null"
+        android:elevation="20sp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:background="@drawable/boton"
         android:layout_height="wrap_content"
+
         android:text="Aceptar" />
 
+    </LinearLayout>
 </LinearLayout>

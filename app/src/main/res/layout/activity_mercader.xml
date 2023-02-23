@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_margin="25sp"
+        android:clipChildren="false"
+        android:padding="10sp"
+        android:background="@drawable/resumen"
+        >
+
+        <ImageView
+            android:id="@+id/imagen"
+            android:layout_width="600px"
+            android:layout_height="600px"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="50sp"
+            android:background="@drawable/card"
+            android:elevation="10sp"
+            android:padding="25px"
+            app:srcCompat="@drawable/mercader" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagen"
+            android:id="@+id/botonesMercader"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:background="@null"
+            android:orientation="horizontal"
+
+            android:visibility="invisible">
+
+            <Button
+                android:id="@+id/textComprar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="8sp"
+                android:background="@drawable/boton"
+                android:gravity="center"
+                android:text="@string/comprar"
+                android:layout_weight="1"
+
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/textVender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="8sp"
+                android:layout_marginLeft="10sp"
+                android:background="@drawable/boton"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/vender"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <Button
+                android:layout_marginLeft="10sp"
+                android:padding="8sp"
+                android:id="@+id/textCancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:background="@drawable/boton"
+                android:text="@string/cancelar"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/botonesMercader"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:background="@null"
+            android:orientation="horizontal"
+            android:layout_marginBottom="80sp"
+            android:visibility="visible">
+            <Spinner
+                android:id="@+id/spinnerCantidad"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:prompt="@array/numeros"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:orientation="horizontal"
+            android:layout_marginBottom="80sp">
+            <Button
+                android:id="@+id/textComerciar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="10sp"
+                android:background="@drawable/boton"
+                android:gravity="center"
+                android:text="@string/comerciar"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_marginLeft="10sp"
+                android:padding="10sp"
+                android:id="@+id/textContinuar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+
+                android:background="@drawable/boton"
+                android:text="@string/continuar"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

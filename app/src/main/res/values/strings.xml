@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">sleccionpersonaje</string>
+    <string name="recoger">Recoger</string>
+    <string name="comerciar">Comerciar</string>
+    <string name="continuar">Continuar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="vender">Vender</string>
+    <string name="comprar">Comprar</string>
+    <string-array name="numeros">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
 </resources>
