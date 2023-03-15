@@ -68,6 +68,9 @@ class Resumen : AppCompatActivity() {
         defensa_t=Random().nextInt(6)
         mochila_t=200
         vida_t=100
+        personaje.fuerza=fuerza_t
+        personaje.vida=vida_t
+        personaje.defensa=defensa_t
         binding.textViewDefensaI.setText(defensa_t.toString())
         binding.textViewFuerzaI.setText(fuerza_t.toString())
         binding.textViewMochilaI.setText(mochila_t.toString())

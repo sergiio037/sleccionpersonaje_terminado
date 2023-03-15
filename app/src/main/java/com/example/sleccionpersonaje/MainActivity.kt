@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        personaje.mochila.objetos.clear()
+        personaje.mochila.dinero=0
         binding.button.setOnClickListener{
             binding.imageView.setImageResource(R.drawable.guerreropng)
             binding.imageView.setBackground(getDrawable(R.drawable.seleccion))

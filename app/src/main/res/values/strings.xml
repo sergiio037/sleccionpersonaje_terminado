@@ -6,6 +6,7 @@
     <string name="cancelar">Cancelar</string>
     <string name="vender">Vender</string>
     <string name="comprar">Comprar</string>
+    <string name="objeto">Objeto</string>
     <string-array name="numeros">
         <item>1</item>
         <item>2</item>

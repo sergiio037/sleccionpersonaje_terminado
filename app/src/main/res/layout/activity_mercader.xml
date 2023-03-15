@@ -40,7 +40,7 @@
             android:visibility="invisible">
 
             <Button
-                android:id="@+id/textComprar"
+                android:id="@+id/botonComprar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -54,7 +54,7 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
             <Button
-                android:id="@+id/textVender"
+                android:id="@+id/botonVender"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -71,7 +71,7 @@
             <Button
                 android:layout_marginLeft="10sp"
                 android:padding="8sp"
-                android:id="@+id/textCancelar"
+                android:id="@+id/botonCancelar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -93,7 +93,15 @@
             android:background="@null"
             android:orientation="horizontal"
             android:layout_marginBottom="80sp"
-            android:visibility="visible">
+            android:id="@+id/spinners"
+            android:visibility="invisible">
+            <Spinner
+                android:id="@+id/spinnerObjeto"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:prompt="@array/numeros"
+                />
             <Spinner
                 android:id="@+id/spinnerCantidad"
                 android:layout_width="0dp"
@@ -112,6 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+
             android:background="@null"
             android:orientation="horizontal"
             android:layout_marginBottom="80sp">

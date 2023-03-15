@@ -4,9 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E1E1E"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25sp"
+        android:padding="10sp"
 
+        android:clipChildren="false"
+        android:background="@drawable/resumen"
+        android:orientation="vertical">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
@@ -77,4 +86,4 @@
         android:layout_height="wrap_content"
         android:text="Aceptar" />
 
-</LinearLayout>
+    </LinearLayout></LinearLayout>

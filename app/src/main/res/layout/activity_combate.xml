@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_margin="25sp"
+        android:clipChildren="false"
+        android:padding="10sp"
+        android:background="@drawable/resumen"
+        >
+        <ProgressBar
+
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBarVidaEnemigo"
+            android:layout_weight="10"
+            android:progressBackgroundTint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content"
+            android:progress="100"
+            android:min="0"
+            android:max="100"
+
+
+            />
+        <ImageView
+            android:id="@+id/imagen"
+            android:layout_width="600px"
+            android:layout_height="600px"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="50sp"
+            android:background="@drawable/card"
+            android:elevation="10sp"
+            android:padding="25px"
+             />
+
+        <Spinner
+            android:id="@+id/spinnerObjeto"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+             />
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:id="@+id/botones"
+            android:orientation="horizontal"
+            android:layout_marginBottom="80sp">
+            <Button
+                android:id="@+id/textHuir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="10sp"
+                android:background="@drawable/boton"
+                android:gravity="center"
+                android:text="Huir"
+                android:textColor="@color/black"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:textSize="15sp" />
+            <Button
+                android:id="@+id/textAtacar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="10sp"
+                android:background="@drawable/boton"
+                android:gravity="center"
+                android:text="Atacar"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textSize="15sp" />
+
+            <Button
+                android:layout_marginLeft="10sp"
+                android:padding="10sp"
+                android:id="@+id/textObjeto"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+
+                android:background="@drawable/boton"
+                android:text="@string/objeto"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+        <ProgressBar
+
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBarVidaUsuario"
+            android:layout_weight="10"
+            android:progressBackgroundTint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content"
+            android:progress="100"
+            android:max="100"
+            android:min="0"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20sp"
+
+
+            />
+    </RelativeLayout>
+</LinearLayout>

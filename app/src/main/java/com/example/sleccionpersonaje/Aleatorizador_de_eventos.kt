@@ -21,12 +21,14 @@ class Aleatorizador_de_eventos : AppCompatActivity() {
         setContentView(binding.root)
         val intent_objeto =Intent(this,Activity_objeto::class.java)
         val intent_ciudad =Intent(this,ActivityCiudad::class.java)
-        val intent_enemigo =Intent(this,ActivityEnemigo::class.java)
+        val intent_enemigo =Intent(this,Combate::class.java)
         val intent_mercader =Intent(this,ActivityMercader::class.java)
+        var random = ""
         binding.buttonDado.setOnClickListener(){
-            startActivity(intent_mercader)
-             /* Handler().postDelayed({
-                var random = getRandomIntent()
+
+
+             Handler().postDelayed({
+                random=getRandomIntent()
                 if (random.equals("Ciudad"))
                     startActivity(intent_ciudad)
                 else if (random.equals("Mercader"))
@@ -35,7 +37,7 @@ class Aleatorizador_de_eventos : AppCompatActivity() {
                     startActivity(intent_objeto)
                 else if (random.equals("Enemigo"))
                     startActivity(intent_enemigo)
-            }, 10)*/
+            }, 10)
         }
     }
     fun getRandomIntent(): String {

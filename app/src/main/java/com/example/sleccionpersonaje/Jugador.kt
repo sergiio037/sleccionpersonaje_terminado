@@ -11,6 +11,12 @@ class Personaje {
     var partidasJugadas = 0
     var tiempoJugado = 0
     var kills = 0
+    var fuerza= 0
+    var defensa=0
+    var vida=100
+    fun luchar(){
+        vida=100
+    }
     var deaths = 0
     var     mochila:Mochila=Mochila()
 
@@ -34,6 +40,7 @@ class Personaje {
         this.clase = clase
         this.raza = raza
         this.edad = edad
+
 
     }
 
@@ -113,6 +120,7 @@ class Personaje {
         var peso_mochila=0
         var valor_mochila=0
         var cant_obj=0
+        var dinero=0
         var objetos= mutableListOf<Objeto>()
         fun coger(vararg objetos: Objeto){
             var obj_ordenados = objetos
@@ -128,7 +136,35 @@ class Personaje {
             }
             println("el peso final de la mochila es ${peso_mochila} con un valor de ${valor_mochila}")
         }
+        fun arrayObjetos():ArrayList<String>{
+            var objetos_s:ArrayList<String>  = arrayListOf()
+
+            for (x in 0..objetos.size-1){
+                objetos_s.add(objetos.get(x).nombre)
+            }
+            return objetos_s
+        }
+        fun eliminar(nombre:String):Boolean{
+            if (objetos.isNotEmpty()){
+            for (x in 0..objetos.size-1){
+                println("fasd-> "+x)
+                println(objetos[x].nombre+" ->"+ nombre)
+                if (objetos[x].nombre.equals(nombre)){
+
+                    println("trueeeeeeee")
+                    peso_mochila = peso_mochila - objetos[x].peso
+                    valor_mochila=valor_mochila-objetos[x].valor
+                    cant_obj = cant_obj - 1
+                    objetos.removeAt(x)
+                    return true
+                }
+
+            }}
+            println("falseeeee")
+            return false
+        }
     }
+
 
 
 }
@@ -198,13 +234,15 @@ class Objeto {
     var peso = 0
     var valor = 0
     var vida=0
+    var nombre=""
     var relacion:Double = 0.0
 
     constructor(peso: Int, valor: Int, nombre: String,vida:Int) {
         this.peso = peso
         this.valor = valor
-        this.id = id
+        this.nombre=nombre
         this.relacion = valor.toDouble()/peso.toDouble()
+        this.vida=vida
     }
 
 }

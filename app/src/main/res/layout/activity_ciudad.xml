@@ -38,7 +38,7 @@
             android:orientation="horizontal"
             android:layout_marginBottom="80sp">
                 <Button
-                android:id="@+id/text8"
+                android:id="@+id/entrar"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -53,7 +53,7 @@
             <Button
                 android:layout_marginLeft="10sp"
                 android:padding="10sp"
-                android:id="@+id/text9"
+                android:id="@+id/continuar"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
